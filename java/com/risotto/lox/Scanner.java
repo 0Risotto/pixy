@@ -79,12 +79,11 @@ public class Scanner {
                 addToken(match('=') ? GREATER_EQUAL : GREATER);
                 break;
             case '/':
-                // next step is to add /*  */ comments
                 if(match('/')){
                     while(peek()!='\n'&& !isAtEnd()) advance();
                 }
                 else if(match('*')){
-                    addToken(SLASH);
+                    cStyleComment();
                 } 
                 else {
                     addToken(SLASH);
@@ -111,8 +110,22 @@ public class Scanner {
                 }
         }
     }
+   
     
+    private void cStyleComment(){
+        while(!isAtEnd()) {
+            if (peek() == '*' && peekNext() == '/') {
+            advance(); 
+            advance(); 
+            return;
+            }
+        if (peek() == '\n') line++;
+        advance();
+        }
+            Lox.error(line, "Unterminated block comment.");
+        }    
 
+    
     private boolean isAlpha(char c){   
         return (c>= 'a' && c<='z')|| (c>='A'&& c<='Z')|| c=='_';
 
