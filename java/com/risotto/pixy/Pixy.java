@@ -1,4 +1,4 @@
-package com.risotto.lox;
+package com.risotto.pixy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class Lox {
+public class Pixy {
 
     static boolean hadError = false;
     public static void main(String[] args) throws IOException {

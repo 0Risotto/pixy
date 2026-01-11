@@ -1,4 +1,4 @@
-package com.risotto.lox;
+package com.risotto.pixy;
 
 enum TokenType {
   // Single-character tokens.

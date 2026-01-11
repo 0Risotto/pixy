@@ -1,11 +1,11 @@
-package com.risotto.lox;
+package com.risotto.pixy;
+
+import static com.risotto.pixy.TokenType.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.risotto.lox.TokenType.*;
 public class Scanner {
 
     private final String source;
@@ -106,7 +106,7 @@ public class Scanner {
                     identifier();
                 }
                 else {
-                    Lox.error(line, "Unexpected character.");
+                    Pixy.error(line, "Unexpected character.");
                 }
         }
     }
@@ -122,7 +122,7 @@ public class Scanner {
         if (peek() == '\n') line++;
         advance();
         }
-            Lox.error(line, "Unterminated block comment.");
+            Pixy.error(line, "Unterminated block comment.");
         }    
 
     
@@ -172,7 +172,7 @@ public class Scanner {
             advance();
         }
         if(isAtEnd()){
-            Lox.error(line,"Unterminated string.");
+            Pixy.error(line,"Unterminated string.");
             return;
         }
         advance();

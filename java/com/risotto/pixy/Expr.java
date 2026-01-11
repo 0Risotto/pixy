@@ -1,4 +1,4 @@
-package com.risotto.lox;
+package com.risotto.pixy;
 import java.util.List;
 
 abstract class Expr {
@@ -63,4 +63,5 @@ abstract class Expr {
      final Expr right;
  }
 
- abstract <R> R accept(Visitor<R> visitor);}
+ abstract <R> R accept(Visitor<R> visitor);
+}
