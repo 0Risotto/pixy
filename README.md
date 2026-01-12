@@ -1,6 +1,6 @@
 # Pixy
 
-A Java implementation of the Lox programming language interpreter, crafted with care from the book **"Crafting Interpreters"** by Robert Nystrom. Pixy is a tree-walk interpreter that brings the Lox language to life with elegance and clarity.
+A Java implementation of the Lox programming language interpreter, crafted with care from the book **"Crafting Interpreters"** by Robert Nystrom. Pixy is a tree-walk interpreter.
 
 ![Lox Language](https://img.shields.io/badge/Language-Lox-ff69b4)
 ![Java](https://img.shields.io/badge/Java-17%2B-orange)
