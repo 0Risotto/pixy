@@ -1,9 +1,5 @@
 package com.risotto.pixy;
 
-import com.risotto.pixy.Expr.Binary;
-import com.risotto.pixy.Expr.Grouping;
-import com.risotto.pixy.Expr.Literal;
-import com.risotto.pixy.Expr.Unary;
 
 class AstPrinter implements Expr.Visitor<String> {
     String print(Expr expr){
