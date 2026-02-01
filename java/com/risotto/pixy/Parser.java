@@ -3,7 +3,7 @@ package com.risotto.pixy;
 import static com.risotto.pixy.TokenType.*;
 
 import java.util.List;
-
+// Recursive Decent Parser
 public class Parser {
     private final List<Token> tokens;
     private int current = 0;
@@ -145,7 +145,7 @@ public class Parser {
 
     while (!isAtEnd()) {
       if (previous().type == SEMICOLON) return;
-
+        
       switch (peek().type) {
         case CLASS:
         case FUN:
@@ -155,9 +155,9 @@ public class Parser {
         case WHILE:
         case PRINT:
         case RETURN:
-          return;
-      }
-
+        return;
+      }     
+    
       advance();
     }
   } 
@@ -169,7 +169,7 @@ public class Parser {
 
 /*
 expression     → literal
-               | unary
+               | unary      
                | binary
                | grouping ;
 
